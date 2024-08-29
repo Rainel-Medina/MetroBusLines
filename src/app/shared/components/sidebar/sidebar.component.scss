@@ -1,73 +1,45 @@
 /* Estilos generales */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
-
-/* Estilo del sidebar */
-.sidebar {
-  background: linear-gradient(to bottom right, #333, #555);
+nav {
+  background-color: #333;
   width: 250px;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
-  border-radius: 0 15px 15px 0;
+  transition: left 0.3s ease;
 }
 
-.sidebar ul {
-  list-style: none;
-  padding: 20px;
+nav ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.sidebar ul li {
-  margin-bottom: 15px;
+nav ul li {
+  border-bottom: 1px solid #444;
 }
 
-.sidebar ul li a {
+nav ul li a {
+  display: block;
+  padding: 15px;
+  color: #fff;
   text-decoration: none;
-  color: white;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
+  font-size: 14px;
 }
 
-.sidebar ul li a:hover {
+nav ul li a:hover {
   background-color: #E6344A;
 }
 
-.sidebar ul li .children {
+nav ul li .children {
   display: none;
-  margin-top: 10px;
+  background-color: #444;
   padding-left: 15px;
 }
 
-.sidebar ul li:hover .children {
+nav ul li.active .children {
   display: block;
 }
 
-.sidebar ul li .caret {
-  margin-left: auto;
-}
-
-/* Iconos */
-.sidebar ul li a span {
-  margin-right: 10px;
-}
-
-/* Media Queries */
-@media screen and (max-width: 800px) {
-  .sidebar {
-    width: 100%;
-    border-radius: 0;
-  }
+nav ul li .caret {
+  float: right;
 }

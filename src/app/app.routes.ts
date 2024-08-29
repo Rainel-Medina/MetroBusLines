@@ -17,11 +17,7 @@ export const routes: Routes = [
         path: 'five-am-bos',
         loadComponent: () => import('./Viajes/five-am-bos/five-am-bos.component')
       },
-      {
-        path: '',
-        redirectTo: 'dashboard',
-        pathMatch: 'full'
-      }
+
 
     ]
   },
