@@ -10,6 +10,6 @@ import {FormsModule} from "@angular/forms";
   templateUrl: './two-pm-ny.component.html',
   styleUrl: './two-pm-ny.component.scss'
 })
-export class TWOPMNYComponent {
+export default class TWOPMNYComponent {
 
 }

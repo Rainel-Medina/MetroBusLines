@@ -17,7 +17,34 @@ export const routes: Routes = [
         path: 'five-am-bos',
         loadComponent: () => import('./Viajes/five-am-bos/five-am-bos.component')
       },
-
+      {
+        path: 'five-am-ny',
+        loadComponent: () => import('./Viajes/five-am-ny/five-am-ny.component')
+      },
+      {
+        path: 'ten-am-bos',
+        loadComponent: () => import('./Viajes/ten-am-bos/ten-am-bos.component')
+      },
+      {
+        path: 'ten-am-ny',
+        loadComponent: () => import('./Viajes/ten-am-ny/ten-am-ny.component')
+      },
+      {
+        path: 'two-pm-bos',
+        loadComponent: () => import('./Viajes/two-pm-bos/two-pm-bos.component')
+      },
+      {
+        path: 'two-pm-ny',
+        loadComponent: () => import('./Viajes/two-pm-ny/two-pm-ny.component')
+      },
+      {
+        path: 'seven-pm-bos',
+        loadComponent: () => import('./Viajes/seven-pm-bos/seven-pm-bos.component')
+      },
+      {
+        path: 'seven-pm-ny',
+        loadComponent: () => import('./Viajes/seven-pm-ny/seven-pm-ny.component')
+      },
 
     ]
   },

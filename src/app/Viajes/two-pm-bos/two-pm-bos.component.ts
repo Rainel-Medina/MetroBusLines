@@ -10,6 +10,6 @@ import {FormsModule} from "@angular/forms";
   templateUrl: './two-pm-bos.component.html',
   styleUrl: './two-pm-bos.component.scss'
 })
-export class TWOPMBOSComponent {
+export default class TWOPMBOSComponent {
 
 }

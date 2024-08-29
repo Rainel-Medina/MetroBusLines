@@ -10,6 +10,6 @@ import {FormsModule} from "@angular/forms";
   templateUrl: './seven-pm-bos.component.html',
   styleUrl: './seven-pm-bos.component.scss'
 })
-export class SEVENPMBOSComponent {
+export default class SEVENPMBOSComponent {
 
 }
