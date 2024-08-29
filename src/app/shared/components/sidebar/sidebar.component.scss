@@ -1,0 +1,73 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Estilo del sidebar */
+.sidebar {
+  background: linear-gradient(to bottom right, #333, #555);
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-radius: 0 15px 15px 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #E6344A;
+}
+
+.sidebar ul li .children {
+  display: none;
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+.sidebar ul li:hover .children {
+  display: block;
+}
+
+.sidebar ul li .caret {
+  margin-left: auto;
+}
+
+/* Iconos */
+.sidebar ul li a span {
+  margin-right: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 800px) {
+  .sidebar {
+    width: 100%;
+    border-radius: 0;
+  }
+}
