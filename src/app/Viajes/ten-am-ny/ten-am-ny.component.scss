@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  background-color: #ffffff; /* Fondo blanco para el contenedor */
+  background-color: gray(255); /* Fondo blanco para el contenedor */
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -96,7 +96,7 @@ body {
 }
 
 .table-container tbody tr:hover {
-  background-color: #f1f1f1;
+  background-color: #050505;
 }
 
 .table-container td {

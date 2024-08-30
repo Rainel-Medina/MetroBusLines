@@ -5,6 +5,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import {MatIcon} from "@angular/material/icon";
 import {RouterOutlet} from "@angular/router";
+import {CurrencyInputDirective} from "../../currency-input.directive";
 
 @Component({
   selector: 'app-five-am-bos',
@@ -15,7 +16,8 @@ import {RouterOutlet} from "@angular/router";
     MatFormFieldModule,
     FormsModule,
     MatIcon,
-    RouterOutlet
+    RouterOutlet,
+    CurrencyInputDirective
   ],
   templateUrl: './five-am-bos.component.html',
   styleUrl: './five-am-bos.component.scss'

@@ -1,4 +1,5 @@
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
 <body>
 <div class="container">
@@ -30,8 +31,9 @@
 
       <div class="md:flex-1 md:pr-3">
         <label for="extras">Extras</label>
-        <input id="extras" type="tel" name="extras" placeholder="$">
+        <input id="extras" type="number" name="extras" placeholder="$" currencyInput>
       </div>
+
     </div>
 
     <div class="md:flex mb-4">
@@ -54,31 +56,25 @@
 
       <div class="md:flex-1 md:pr-3">
         <label for="extras_2">Extras</label>
-        <input id="extras_2" type="tel" name="extras_2" placeholder="$">
+        <input id="extras_2" type="number" name="extras_2" placeholder="$">
       </div>
     </div>
 
     <div class="md:flex mb-4">
       <div class="md:flex-1 md:pr-3">
         <label for="phone_1">Phone Number 1</label>
-        <input id="phone_1" type="tel" name="phone_1" placeholder="(555) 555-5555">
+        <input id="phone_1" type="number" name="phone_1" placeholder="(555) 555-5555">
       </div>
       <div class="md:flex-1 md:pl-3">
         <label for="phone_2">Phone Number 2</label>
-        <input id="phone_2" type="tel" name="phone_2" placeholder="(555) 555-5555">
+        <input id="phone_2" type="number" name="phone_2" placeholder="(555) 555-5555">
       </div>
     </div>
 
     <div class="md:flex mb-4">
       <div class="md:flex-1 md:pr-3">
         <label for="cd">CD</label>
-        <select id="cd" name="cd">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
+        <input id="cd" type="number" name="cd">
       </div>
 
       <div class="md:flex-1 md:pl-3">
@@ -97,58 +93,453 @@
       </div>
 
       <div class="md:flex-1 md:pr-3">
+        <label for="precio">Precio</label>
+        <input id="precio" type="number" name="precio" placeholder="$">
+      </div>
+
+      <div class="md:flex-1 md:pr-3">
         <label for="pas">PAS</label>
-        <input id="pas" type="text" name="pas">
+        <input id="pas" type="number" name="pas">
       </div>
 
       <div class="md:flex-1 md:pr-3">
         <label for="kp">K/P</label>
-        <input id="kp" type="text" name="kp">
+        <input id="kp" type="number" name="kp">
       </div>
 
       <div class="md:flex-1 md:pr-3">
         <label for="spe">SPE</label>
-        <input id="spe" type="text" name="spe">
+        <input id="spe" type="number" name="spe">
+      </div>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <!-- Contenedor de botones arriba de la tabla -->
+    <div class="flex justify-between mb-4">
+      <div class="flex space-x-2">
+        <button class="bg-green-500 bg-blue-700 text-white font-bold py-2 px-3 rounded">
+          Guardar
+        </button>
+        <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-3 rounded" onclick="exportToExcel()">
+          Exportar a Excel
+        </button>
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-3 rounded">
+          Limpiar
+        </button>
       </div>
     </div>
   </div>
 
   <!-- Tabla -->
   <div class="table-container">
-    <table>
+    <table class="min-w-full border-collapse border border-gray-300">
       <thead>
       <tr>
-        <th>Companies</th>
-        <th>Budget</th>
-        <th>Completion</th>
+        <th>Phone number 1</th>
+        <th>Phone Number 2</th>
+        <th>CD</th>
+        <th>Status</th>
+        <th>Precio</th>
+        <th>P.Name</th>
+        <th>Pick-up Address</th>
+        <th>Rescue</th>
+        <th>Extra</th>
+        <th>Drop-off Address</th>
+        <th>Rescue</th>
+        <th>Extra</th>
+        <th>Pas</th>
+        <th>K/P</th>
+        <th>Spec</th>
+        <th>Acciones</th>
       </tr>
       </thead>
       <tbody>
       <tr>
-        <td>Material XD Version</td>
-        <td>$14,000</td>
-        <td>60%</td>
+        <td>289-512-1235</td>
+        <td></td>
+        <td>2</td>
+        <td>Positivo</td>
+        <td>$120</td>
+        <td>Nicol</td>
+        <td>12 pope st salem</td>
+        <td>Rainel</td>
+        <td>$25</td>
+        <td>1150 st Lawrence Ave, Bronx</td>
+        <td>Apoyo</td>
+        <td>$25</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td class="border border-gray-300 py-3 px-4">
+          <div class="flex flex-col space-y-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </td>
       </tr>
       <tr>
-        <td>Add Progress Track</td>
-        <td>$3,000</td>
-        <td>10%</td>
+        <td>289-512-1235</td>
+        <td></td>
+        <td>2</td>
+        <td>Positivo</td>
+        <td>$120</td>
+        <td>Nicol</td>
+        <td>12 pope st salem</td>
+        <td>Rainel</td>
+        <td>$25</td>
+        <td>1150 st Lawrence Ave, Bronx</td>
+        <td>Apoyo</td>
+        <td>$25</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td class="border border-gray-300 py-3 px-4">
+          <div class="flex flex-col space-y-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </td>
       </tr>
       <tr>
-        <td>Add Progress Track</td>
-        <td>$3,000</td>
-        <td>10%</td>
+        <td>289-512-1235</td>
+        <td></td>
+        <td>2</td>
+        <td>Positivo</td>
+        <td>$120</td>
+        <td>Nicol</td>
+        <td>12 pope st salem</td>
+        <td>Rainel</td>
+        <td>$25</td>
+        <td>1150 st Lawrence Ave, Bronx</td>
+        <td>Apoyo</td>
+        <td>$25</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td class="border border-gray-300 py-3 px-4">
+          <div class="flex flex-col space-y-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </td>
       </tr>
       <tr>
-        <td>Add Progress Track</td>
-        <td>$3,000</td>
-        <td>10%</td>
+        <td>289-512-1235</td>
+        <td></td>
+        <td>2</td>
+        <td>Positivo</td>
+        <td>$120</td>
+        <td>Nicol</td>
+        <td>12 pope st salem</td>
+        <td>Rainel</td>
+        <td>$25</td>
+        <td>1150 st Lawrence Ave, Bronx</td>
+        <td>Apoyo</td>
+        <td>$25</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td class="border border-gray-300 py-3 px-4">
+          <div class="flex flex-col space-y-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>289-512-1235</td>
+        <td></td>
+        <td>2</td>
+        <td>Positivo</td>
+        <td>$120</td>
+        <td>Nicol</td>
+        <td>12 pope st salem</td>
+        <td>Rainel</td>
+        <td>$25</td>
+        <td>1150 st Lawrence Ave, Bronx</td>
+        <td>Apoyo</td>
+        <td>$25</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td class="border border-gray-300 py-3 px-4">
+          <div class="flex flex-col space-y-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>289-512-1235</td>
+        <td></td>
+        <td>2</td>
+        <td>Positivo</td>
+        <td>$120</td>
+        <td>Nicol</td>
+        <td>12 pope st salem</td>
+        <td>Rainel</td>
+        <td>$25</td>
+        <td>1150 st Lawrence Ave, Bronx</td>
+        <td>Apoyo</td>
+        <td>$25</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td class="border border-gray-300 py-3 px-4">
+          <div class="flex flex-col space-y-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>289-512-1235</td>
+        <td></td>
+        <td>2</td>
+        <td>Positivo</td>
+        <td>$120</td>
+        <td>Nicol</td>
+        <td>12 pope st salem</td>
+        <td>Rainel</td>
+        <td>$25</td>
+        <td>1150 st Lawrence Ave, Bronx</td>
+        <td>Apoyo</td>
+        <td>$25</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td class="border border-gray-300 py-3 px-4">
+          <div class="flex flex-col space-y-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>289-512-1235</td>
+        <td></td>
+        <td>2</td>
+        <td>Positivo</td>
+        <td>$120</td>
+        <td>Nicol</td>
+        <td>12 pope st salem</td>
+        <td>Rainel</td>
+        <td>$25</td>
+        <td>1150 st Lawrence Ave, Bronx</td>
+        <td>Apoyo</td>
+        <td>$25</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td class="border border-gray-300 py-3 px-4">
+          <div class="flex flex-col space-y-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>289-512-1235</td>
+        <td></td>
+        <td>2</td>
+        <td>Positivo</td>
+        <td>$120</td>
+        <td>Nicol</td>
+        <td>12 pope st salem</td>
+        <td>Rainel</td>
+        <td>$25</td>
+        <td>1150 st Lawrence Ave, Bronx</td>
+        <td>Apoyo</td>
+        <td>$25</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td class="border border-gray-300 py-3 px-4">
+          <div class="flex flex-col space-y-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>289-512-1235</td>
+        <td></td>
+        <td>2</td>
+        <td>Positivo</td>
+        <td>$120</td>
+        <td>Nicol</td>
+        <td>12 pope st salem</td>
+        <td>Rainel</td>
+        <td>$25</td>
+        <td>1150 st Lawrence Ave, Bronx</td>
+        <td>Apoyo</td>
+        <td>$25</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td class="border border-gray-300 py-3 px-4">
+          <div class="flex flex-col space-y-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>289-512-1235</td>
+        <td></td>
+        <td>2</td>
+        <td>Positivo</td>
+        <td>$120</td>
+        <td>Nicol</td>
+        <td>12 pope st salem</td>
+        <td>Rainel</td>
+        <td>$25</td>
+        <td>1150 st Lawrence Ave, Bronx</td>
+        <td>Apoyo</td>
+        <td>$25</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td class="border border-gray-300 py-3 px-4">
+          <div class="flex flex-col space-y-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>289-512-1235</td>
+        <td></td>
+        <td>2</td>
+        <td>Positivo</td>
+        <td>$120</td>
+        <td>Nicol</td>
+        <td>12 pope st salem</td>
+        <td>Rainel</td>
+        <td>$25</td>
+        <td>1150 st Lawrence Ave, Bronx</td>
+        <td>Apoyo</td>
+        <td>$25</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td class="border border-gray-300 py-3 px-4">
+          <div class="flex flex-col space-y-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>289-512-1235</td>
+        <td></td>
+        <td>2</td>
+        <td>Positivo</td>
+        <td>$120</td>
+        <td>Nicol</td>
+        <td>12 pope st salem</td>
+        <td>Rainel</td>
+        <td>$25</td>
+        <td>1150 st Lawrence Ave, Bronx</td>
+        <td>Apoyo</td>
+        <td>$25</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td class="border border-gray-300 py-3 px-4">
+          <div class="flex flex-col space-y-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>289-512-1235</td>
+        <td></td>
+        <td>2</td>
+        <td>Positivo</td>
+        <td>$120</td>
+        <td>Nicol</td>
+        <td>12 pope st salem</td>
+        <td>Rainel</td>
+        <td>$25</td>
+        <td>1150 st Lawrence Ave, Bronx</td>
+        <td>Apoyo</td>
+        <td>$25</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td class="border border-gray-300 py-3 px-4">
+          <div class="flex flex-col space-y-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </td>
       </tr>
       <!-- Más filas -->
       </tbody>
     </table>
   </div>
+
 </div>
 </body>
+
 
 
