@@ -23,5 +23,15 @@
       </ul>
     </li>
     <li><a href="#"><span class="bi bi-briefcase"></span> Finanza</a></li>
+    <li class="submenu">
+      <a href="#" (click)="toggleSubmenu($event)"><span class="bi bi-rocket"></span> Consultas <span class="caret"></span></a>
+      <ul class="children">
+        <li><a routerLink="/consultas-usuarios">Usuarios</a></li>
+        <li><a routerLink="/consulta-vehicle">Vehicles</a></li>
+        <li><a routerLink="/ten-am-bos">Mantenimiento de Vehicles</a></li>
+        <li><a routerLink="/ten-am-ny">Viajes</a></li>
+
+      </ul>
+    </li>
   </ul>
 </nav>
