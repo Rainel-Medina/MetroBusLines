@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-vehicle',
   standalone: true,
-  imports: [],
+    imports: [
+        ReactiveFormsModule
+    ],
   templateUrl: './vehicle.component.html',
   styleUrl: './vehicle.component.scss'
 })
-export class VehicleComponent {
+export default class VehicleComponent {
 
 }

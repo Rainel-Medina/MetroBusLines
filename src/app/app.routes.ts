@@ -14,6 +14,10 @@ export const routes: Routes = [
         loadComponent: () => import('./Mantenimiento/usuarios/usuarios.component')
       },
       {
+        path: 'vehicle',
+        loadComponent: () => import('./Mantenimiento/vehicle/vehicle.component')
+      },
+      {
         path: 'five-am-bos',
         loadComponent: () => import('./Viajes/five-am-bos/five-am-bos.component')
       },
