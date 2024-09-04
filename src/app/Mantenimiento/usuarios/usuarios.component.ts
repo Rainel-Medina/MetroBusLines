@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-usuarios',
   standalone: true,
-  imports: [],
+  imports: [
+    ReactiveFormsModule
+  ],
   templateUrl: './usuarios.component.html',
   styleUrl: './usuarios.component.scss'
 })
