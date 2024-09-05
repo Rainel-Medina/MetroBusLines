@@ -30,6 +30,10 @@ export const routes: Routes = [
         loadComponent: () => import('./Consultas/consulta-manten-vehicle/consulta-manten-vehicle.component')
       },
       {
+        path: 'consulta-viajes',
+        loadComponent: () => import('./Consultas/consulta-viajes/consulta-viajes.component')
+      },
+      {
         path: 'five-am-bos',
         loadComponent: () => import('./Viajes/five-am-bos/five-am-bos.component')
       },
