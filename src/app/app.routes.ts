@@ -26,6 +26,10 @@ export const routes: Routes = [
         loadComponent: () => import('./Consultas/consulta-vehicle/consulta-vehicle.component')
       },
       {
+        path: 'consulta-manten-vehicle',
+        loadComponent: () => import('./Consultas/consulta-manten-vehicle/consulta-manten-vehicle.component')
+      },
+      {
         path: 'five-am-bos',
         loadComponent: () => import('./Viajes/five-am-bos/five-am-bos.component')
       },
