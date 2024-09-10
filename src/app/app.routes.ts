@@ -18,6 +18,10 @@ export const routes: Routes = [
         loadComponent: () => import('./Mantenimiento/vehicle/vehicle.component')
       },
       {
+        path: 'mantenimiento-vehicle',
+        loadComponent: () => import('./Mantenimiento/mantenimiento-vehicle/mantenimiento-vehicle.component')
+      },
+      {
         path: 'consultas-usuarios',
         loadComponent: () => import('./Consultas/consultas-usuarios/consultas-usuarios.component')
       },
